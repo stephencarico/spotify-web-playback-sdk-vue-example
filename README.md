@@ -55,6 +55,6 @@ By participating, you are expected to honor this code.
 
 ## License
 
-Copyright 2021 Spotify AB.
+None. I hope this helps those Vue warriors out there!
 
-Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
+<a href="https://www.buymeacoffee.com/stephencarico" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
