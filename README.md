@@ -40,7 +40,7 @@ Start both client and server with the following command:
 npm run dev
 ```
 
-The React application will start on `http://localhost:3000`
+The Vue application will start on `http://localhost:3000`
 
 ## Resources
 
