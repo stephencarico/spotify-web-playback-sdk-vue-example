@@ -5,10 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "server": "node server",
+    "dev": "run-p server serve"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "pinia": "^2.0.33",
     "vue": "^2.6.14"
   },
   "devDependencies": {
@@ -17,8 +20,13 @@
     "@vue/cli-plugin-babel": "^5.0.0",
     "@vue/cli-plugin-eslint": "^5.0.0",
     "@vue/cli-service": "^5.0.0",
+    "dotenv": "^16.0.3",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "npm-run-all": "^4.1.5",
+    "request": "^2.88.2",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {

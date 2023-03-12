@@ -1,28 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <WebPlayback v-if="store.token" :token="store.token" />
+    <LoginButton v-else />
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { useAuthStore } from '@/stores/auth';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+import LoginButton from './components/LoginButton.vue';
+import WebPlayback from './components/WebPlayback.vue';
+
+const store = useAuthStore();
+
+async function getToken() {
+  const response = await fetch('/auth/token');
+  const json = await response.json();
+  store.setToken(json.access_token);
 }
+
+getToken();
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
